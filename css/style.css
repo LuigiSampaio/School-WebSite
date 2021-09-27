@@ -3,6 +3,8 @@
     --white: #fff;
     --silver444:#444;
     --silver333:#333;
+    --silver777: #777;
+    --seilver999: #999;
     --orangec12: #f39c12;
     --orange40f: #f1c40f;
 }
@@ -39,6 +41,17 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, var(--orange40f), var(--orangec12));
+}
+
+.btn {
+    padding: .7rem 3rem;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--gradient);
+    border-radius: 5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
 }
 
 header {
@@ -97,6 +110,117 @@ header #menu {
     display: none;
 }
 
+.login-form {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: -120%; left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form.popup {
+    top: 0;
+}
+
+.login-form form {
+    width: 35rem;
+    background-color: var(--white);
+    margin: 0 2rem;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem var(--silver333);
+    position: relative; 
+}
+
+.login-form form h3 {
+    font-size: 3rem;
+    color: var(--orangec12);
+    padding: 1rem 0;   
+}
+
+.login-form .box {
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid var(--silver777);
+    font-size: 1.6rem; 
+    color: var(--silver333);
+    text-transform: none;
+}
+
+.login-form .box::placeholder {
+    text-transform: capitalize;
+}
+
+.login-form .box:focus {
+    border-color: var(--orangec12);
+}
+
+.login-form .box:nth-child(3) {
+    margin-bottom: 5rem;
+}
+
+.login-form form p {
+    font-size: 1.4rem;
+    color: var(--silver777);
+    padding: .5rem 0;
+}
+
+.login-form form p a {
+    color: var(--orangec12);
+}
+
+.login-form form .btn {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.login-form form .btn:hover {
+    background: var(--silver444);
+}
+
+.login-form form .fa-times {
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--seilver999);
+}
+
+.login-form form .fa-times:hover {
+    color: var(--silver444);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* media queries */
 @media (max-width: 768px) {
@@ -143,5 +267,11 @@ header #menu {
     header .navbar.nav-toggle {
         top: 6.4rem;
 
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
     }
 }
