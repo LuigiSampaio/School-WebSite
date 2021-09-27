@@ -7,6 +7,8 @@
     --seilver999:#999;
     --orangec12:#f39c12;
     --orange40f:#f1c40f;
+    --black111: #111;
+    --silver222: #222;
 }
 
 * {
@@ -412,13 +414,73 @@ header #menu {
     margin: 1rem auto;
 }
 
-
-
-
-
 /* section teacher end */
 
+/* section contact starts */
+ .contact {
+    background: var(--black111);
+}
 
+.contact .heading {
+    color: var(--white);
+}
+
+.contact .row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.contact .row form {
+    flex: 1 1 50rem;
+    background: var(--silver222);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+.contact .row form .box {
+    height: 5rem;
+    width: 49%;
+    border: .1rem solid var(--white);
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--white);
+    background: none;
+    text-transform: none;
+}
+
+.contact .row form .box:focus {
+    border-color: var(--orangec12);
+}
+
+.contact .row form .box::placeholder {
+    text-transform: capitalize;
+}
+
+.contact .row form .address {
+    height: 15rem;
+    padding: 1rem;
+    resize: none;
+    width: 100%;
+}
+
+.contact .row form .btn:hover {
+    background: var(--white);
+    color: var(--silver333);
+}
+
+.contact .row .image img {
+    height: 80vh;
+    margin: 2rem;
+}
+
+/* section contact end */
 
 
 
@@ -498,10 +560,18 @@ header #menu {
     .teacher p {
         width: auto;
     }
+
+    .contact .row .image {
+        display: none; 
+    }
 }
 
 @media (max-width: 500px) {
     html {
         font-size: 50%;
+    }
+
+    .contact .row form .box {
+        width: 100%;
     }
 }
