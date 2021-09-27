@@ -1,12 +1,12 @@
 :root {
     --gradient: linear-gradient(90deg, var(--orange40f), var(--orangec12));
-    --white: #fff;
+    --white:#fff;
     --silver444:#444;
     --silver333:#333;
-    --silver777: #777;
-    --seilver999: #999;
-    --orangec12: #f39c12;
-    --orange40f: #f1c40f;
+    --silver777:#777;
+    --seilver999:#999;
+    --orangec12:#f39c12;
+    --orange40f:#f1c40f;
 }
 
 * {
@@ -81,7 +81,7 @@ section {
     left: 120%;
 }
 
-/* start header menu */
+/* header menu starts */
 header {
     width: 100%;
     display: flex;
@@ -137,9 +137,9 @@ header #menu {
     cursor: pointer;
     display: none;
 }
-/* end header menu */
+/* header menu end */
 
-/* start login form */
+/* login form starts */
 .login-form {
     height: 100%;
     width: 100%;
@@ -225,9 +225,9 @@ header #menu {
     color: var(--silver444);
 }
 
-/* end login form */
+/* login form end */
 
-/* start section home */
+/* section home starts */
 .home {
     display: flex;
     align-items: center;
@@ -274,10 +274,41 @@ header #menu {
     }
 }
 
-/* end section home */
+/* section home end */
 
+/* section about starts*/
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+}
 
+.about .image {
+    flex: 1 1 40rem;
+}
 
+.about .image img {
+    height: 65vh;
+    width: 100%;
+}
+
+.about .content {
+    flex: 1 1 40rem;
+}
+
+.about .content h3 {
+    font-size: 3.5rem;
+    color: var(--silver777);
+}
+
+.about .content p {
+    font-size: 1.5rem;
+    color: var(--silver777);
+    padding: 1rem 0;
+}
+
+/* section about end*/
 
 
 
