@@ -43,6 +43,14 @@ html::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, var(--orange40f), var(--orangec12));
 }
 
+/* global style section */
+section {
+    min-height: 100vh;
+    padding: 1rem 7%;
+    padding-top: 6rem;
+}
+
+/* global style button */
 .btn {
     padding: .7rem 3rem;
     font-size: 2rem;
@@ -52,8 +60,28 @@ html::-webkit-scrollbar-thumb {
     margin-top: 1rem;
     cursor: pointer;
     box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
 }
 
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -1rem; left: -100%;
+    background-color: #fff9;
+    height: 150%;
+    width: 20%;
+    transform: rotate(25deg);
+    z-index: -1;
+}
+
+.btn:hover::before  {
+    transition: .3s linear; 
+    left: 120%;
+}
+
+/* start header menu */
 header {
     width: 100%;
     display: flex;
@@ -109,7 +137,9 @@ header #menu {
     cursor: pointer;
     display: none;
 }
+/* end header menu */
 
+/* start login form */
 .login-form {
     height: 100%;
     width: 100%;
@@ -195,6 +225,57 @@ header #menu {
     color: var(--silver444);
 }
 
+/* end login form */
+
+/* start section home */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background: url('/utils/home-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.home h1 {
+    font-size: 6rem;
+    color: var(--silver777);
+}
+
+.home p {
+    font-size: 1.9rem;
+    color: var(--seilver999);
+    padding: 1rem 0;
+    width: 70rem;
+}
+
+.home .shape {
+    position: absolute;
+    bottom: -.2rem; left: 0;
+    height: 15rem;
+    width: 100%;
+    background: url('/utils/shape.png');
+    block-size: 100rem 15rem;
+    filter: drop-shadow(0 -1.rem .1rem rgba(0, 0, 0, .2));
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: 0rem;
+    }
+
+    100% {
+        background-position-x: 100rem ;
+    }
+}
+
+/* end section home */
+
 
 
 
@@ -266,6 +347,14 @@ header #menu {
 
     header .navbar.nav-toggle {
         top: 6.4rem;
+    }
+
+    .home h1 {
+        top: 6.4rem;
+    }
+
+    .home p {
+        width: auto;
     }
 }
 
