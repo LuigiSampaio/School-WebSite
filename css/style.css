@@ -482,6 +482,27 @@ header #menu {
 
 /* section contact end */
 
+/* section footer starts */
+.footer {
+    background: var(--silver333);
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box {
+    margin: 1.5rem;
+    text-align: center;
+    flex: 1 1 25rem;
+}
+
+
+
+
+/* section footer end */
 
 
 
