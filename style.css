@@ -1,3 +1,151 @@
+:root {
+    --gradient: linear-gradient(90deg, var(--orange40f), var(--orangec12));
+    --white: #fff;
+    --silver444:#444;
+    --silver333:#333;
+    --orangec12: #f39c12;
+    --orange40f: #f1c40f;
+}
+
 * {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background-color: var(--orangec12);
+    color: var(--white);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--silver333);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--orange40f), var(--orangec12));
+}
+
+body {
+    height: 300rem;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    padding: 1.5rem 7%;
+    background: var(--gradient);
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, .3);
+}
+
+header .logo {
+    color: var(--white);
+    font-size: 2.5rem;
+}
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar ul li {
+    margin: 0 1rem;
+}
+
+header .navbar ul li a {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: var(--silver444);
+}
+
+header #login {
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+header #login:hover {
+    color: var(--silver444);
+}
+
+header #menu {
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+
+/* media queries */
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header #menu {
+        display: block;
+    }
+
+    header .navbar {
+        position: fixed;
+        top: -120%; left:0;
+        width: 100%;
+        background:  var(--silver444);
+    }
+
+    header .navbar ul {
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    header .navbar ul li {
+        margin: 1.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    header .navbar ul li a {
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover {
+        color: var(--orangec12);
+    }   
+
+    .fa-times {
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle {
+        top: 6.4rem;
+
+    }
 }
