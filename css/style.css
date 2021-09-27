@@ -395,14 +395,28 @@ header #menu {
     font-size: 3rem;
 }
 
-
-
-
-
-
-
-
 /* section course end */
+
+/* section teacher starts */
+.teacher {
+    text-align: center;
+    background: url('/utils/teachers.jfif') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.teacher p {
+    font-size: 1.8rem;
+    color: var(--silver777);
+    width: 65rem;
+    margin: 1rem auto;
+}
+
+
+
+
+
+/* section teacher end */
 
 
 
@@ -480,9 +494,13 @@ header #menu {
     .home p {
         width: auto;
     }
+
+    .teacher p {
+        width: auto;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     html {
         font-size: 50%;
     }
