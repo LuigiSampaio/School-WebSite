@@ -34,15 +34,19 @@ html {
 }
 
 html::-webkit-scrollbar {
-    width: 1.5rem;
+    width: 1.6rem; 
 }
 
 html::-webkit-scrollbar-track {
-    background: var(--silver333);
+    background: var(--silver333);  
 }
 
 html::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, var(--orange40f), var(--orangec12));
+    border-radius: .8rem;
+    border: .3rem solid transparent;
+    background-clip: content-box;
+    margin-left: 0.5rem;
 }
 
 /* global style section */
@@ -499,9 +503,46 @@ header #menu {
     flex: 1 1 25rem;
 }
 
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
 
+.footer .box-container .box p {
+    font-size: 1.7rem;
+    color: var(--white);
+    padding: .7rem 0;
+}
 
+.footer .box-container .box p i {
+    padding-right: .5rem;
+    color: var(--orangec12);
+}
+ 
+.footer .box-container .box a {
+    font-size: 1.8rem;
+    display: block;
+    padding: .5rem 0;
+    color: var(--white);
+}
 
+.footer .box-container .box a:hover {
+    text-decoration: underline;
+}
+
+.footer .credit {
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    background: var(--black111);
+    text-align: center;
+    font-weight: normal;
+}
+
+.footer .credit a {
+    color: var(--orangec12);
+}
 /* section footer end */
 
 
