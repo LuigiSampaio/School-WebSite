@@ -246,7 +246,7 @@ header #menu {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    background: url('/utils/home-bg.jpg') no-repeat;
+    background: url('utils/home-bg.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -271,7 +271,7 @@ header #menu {
     bottom: -.2rem; left: 0;
     height: 15rem;
     width: 100%;
-    background: url('/utils/shape.png');
+    background: url('utils/shape.png');
     block-size: 100rem 15rem;
     filter: drop-shadow(0 -1.rem .1rem rgba(0, 0, 0, .2));
     animation: animate 10s linear infinite;
@@ -406,7 +406,7 @@ header #menu {
 /* section teacher starts */
 .teacher {
     text-align: center;
-    background: url('/utils/teachers.jfif') no-repeat;
+    background: url('utils/teachers.jfif') no-repeat;
     background-size: cover;
     background-position: bottom;
 }
